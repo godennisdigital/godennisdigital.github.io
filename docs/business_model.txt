@@ -1,0 +1,79 @@
+{
+  "business_model": {
+    "name": "Trades Website Freelance Business",
+    "location": "London, UK",
+    "value_proposition": "AI-accelerated web development turning multi-week builds into multi-day builds, using a reusable template customized per client",
+    "target_niche": {
+      "segment": "independent tradespeople and home services",
+      "examples": ["plumbers", "electricians", "builders", "roofers"],
+      "why": [
+        "high-intent search demand (emergency repairs)",
+        "easy ROI pitch: one extra job pays for the site",
+        "transactional sales process, minimal branding negotiation",
+        "low content friction: clients supply services list, coverage area, a few job photos"
+      ]
+    },
+    "revenue_model": {
+      "project_fee_gbp": { "min": 1500, "max": 3500 },
+      "recurring_retainer_gbp_per_month": { "min": 50, "max": 100 },
+      "retainer_includes": ["hosting", "maintenance", "small content updates"]
+    }
+  },
+  "product_spec": {
+    "name": "Trades Template",
+    "type": "reusable, mobile-first website template",
+    "tech_stack": ["HTML5", "CSS3 (Flexbox/Grid)", "vanilla JavaScript"],
+    "explicitly_avoid": ["React/Vue/Next.js", "CSS frameworks (Bootstrap/Tailwind)", "build tools (Vite/Webpack)"],
+    "components_to_build": [
+      {
+        "name": "sticky_header",
+        "requirements": ["business name/logo", "persistent click-to-call button (tel: link)", "visible on scroll", "mobile nav toggle"]
+      },
+      {
+        "name": "hero_section",
+        "requirements": ["headline stating service + area", "hero image", "primary CTA (call or quote form)"]
+      },
+      {
+        "name": "services_grid",
+        "requirements": ["4-6 services", "icon + title + one-line description per service", "responsive grid/flex layout"]
+      },
+      {
+        "name": "service_area_section",
+        "requirements": ["embedded map (e.g. Google Maps iframe)", "list of covered boroughs/postcodes"]
+      },
+      {
+        "name": "photo_reviews_section",
+        "requirements": ["3+ job photos", "2-3 testimonial cards (name, star rating, quote)"]
+      },
+      {
+        "name": "quote_form",
+        "requirements": ["fields: name, phone, service needed, message", "client-side JS validation (required fields, valid phone format)", "no backend needed initially — console-log or Formspree-style submit"]
+      },
+      {
+        "name": "footer",
+        "requirements": ["NAP info (name, address, phone)", "opening hours", "social links"]
+      }
+    ],
+    "design_requirements": {
+      "approach": "mobile-first",
+      "breakpoints": ["375px base", "768px tablet", "1200px+ desktop"],
+      "customization_points": ["logo", "colors", "local keywords", "service list", "coverage area", "job photos", "business name"]
+    },
+    "file_structure": {
+      "index.html": "root",
+      "css/style.css": "styles",
+      "js/script.js": "interactivity (nav toggle, form validation, smooth scroll)",
+      "images/": "hero + job photos"
+    },
+    "stretch_goals": [
+      "real form handler via Formspree or similar (no backend code)",
+      "parameterize via a single JS config object (business name/colors/services) for fast per-client re-skinning",
+      "basic SEO: meta description, title tag, schema.org LocalBusiness structured data"
+    ]
+  },
+  "goal": {
+    "objective": "land first paying client",
+    "deadline": "2027-03-31"
+  },
+  "agent_task": "Build the Trades Template components listed under product_spec.components_to_build, in vanilla HTML/CSS/JS, mobile-first, using the placeholder content already established for 'Apex Plumbing & Heating' unless different sample content is supplied."
+}
