@@ -120,7 +120,6 @@ h2 span { color: #737b6c; }
 .contact-form input, .contact-form textarea { width: 100%; margin: 0 0 18px; padding: 10px 0; color: white; background: transparent; border: 0; border-bottom: 1px solid #6c8878; border-radius: 0; outline: none; font-size: 13px; resize: vertical; }
 .contact-form input:focus, .contact-form textarea:focus { border-color: var(--green); }
 .contact-form .button { justify-self: start; margin-top: 5px; }
-.form-status { min-height: 18px; margin: 13px 0 0; color: var(--green); font-size: 11px; line-height: 1.5; }
 .site-footer { min-height: 76px; padding: 20px max(20px, calc((100% - 1180px) / 2)); display: flex; align-items: center; justify-content: space-between; gap: 18px; }
 .footer-brand { font: 700 10px var(--display); letter-spacing: .06em; }
 .footer-brand span { margin-left: 10px; color: var(--muted); font: 400 9px var(--body); }

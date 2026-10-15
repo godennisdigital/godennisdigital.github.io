@@ -35,11 +35,15 @@ test("mobile navigation opens and closes after choosing a section", async ({ pag
   await expect(page.getByRole("button", { name: "Open navigation" })).toHaveAttribute("aria-expanded", "false");
 });
 
-test("enquiry form validates input and explains missing email configuration", async ({ page }) => {
+test("enquiry form posts to Formspree and validates input", async ({ page }) => {
+  const form = page.locator("#contact-form");
   const name = page.getByLabel("Your name");
   const email = page.getByLabel("Email address");
   const business = page.getByLabel("What kind of business do you run?");
   const message = page.getByLabel("What would you like your website to do?");
+
+  await expect(form).toHaveAttribute("method", "post");
+  await expect(form).toHaveAttribute("action", "https://formspree.io/f/mljdvzbd");
 
   await page.getByRole("button", { name: "Send project enquiry" }).click();
   await expect(name).toHaveJSProperty("validity.valueMissing", true);
@@ -52,8 +56,7 @@ test("enquiry form validates input and explains missing email configuration", as
   await expect(email).toHaveJSProperty("validity.typeMismatch", true);
 
   await email.fill("customer@example.test");
-  await page.getByRole("button", { name: "Send project enquiry" }).click();
-  await expect(page.locator("#form-status")).toContainText("contactEmail in js/script.js");
+  await expect(email).toHaveJSProperty("validity.typeMismatch", false);
 });
 
 test("hero and portfolio photos load and have alternative text", async ({ page }) => {
