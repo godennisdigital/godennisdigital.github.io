@@ -23,8 +23,7 @@ img { display: block; max-width: 100%; }
 
 .site-header { height: 76px; padding-inline: max(20px, calc((100% - 1180px) / 2)); display: flex; align-items: center; justify-content: space-between; position: sticky; z-index: 10; top: 0; background: rgb(245 244 238 / 94%); border-bottom: 1px solid rgb(25 37 34 / 9%); backdrop-filter: blur(12px); }
 .wordmark { display: flex; align-items: center; gap: 9px; }
-.wordmark-mark { font: 700 28px/.9 var(--display); letter-spacing: 0; }
-.wordmark-mark span, .approach-mark span { color: #648932; }
+.wordmark-mark { width: 32px; height: 32px; }
 .wordmark-name { font: 700 9px/1.15 var(--display); letter-spacing: .04em; }
 .primary-nav { display: flex; align-items: center; gap: 34px; font-size: 12px; font-weight: 600; }
 .primary-nav > a:not(.nav-cta) { transition: color .2s ease; }
@@ -100,7 +99,7 @@ h2 span { color: #737b6c; }
 .concept-note span { margin-right: 6px; color: #648932; }
 
 .approach { display: grid; grid-template-columns: .7fr 1.45fr .85fr; align-items: center; gap: 40px; }
-.approach-mark { color: #dfe3d4; font: 700 clamp(75px, 10vw, 130px)/.8 var(--display); letter-spacing: -.1em; }
+.approach-mark img { width: min(100%, 130px); aspect-ratio: 1; object-fit: contain; }
 .approach-copy .eyebrow { margin-bottom: 18px; }
 .approach-copy h2 { margin-bottom: 18px; font-size: clamp(32px, 3.4vw, 42px); }
 .approach-copy > p:not(.eyebrow) { max-width: 410px; margin-bottom: 20px; color: var(--muted); font-size: 12px; line-height: 1.8; }
@@ -172,7 +171,7 @@ h2 span { color: #737b6c; }
   .project-overlay strong { font-size: 26px; }
   .concept-note { margin-top: 22px; }
   .approach { grid-template-columns: 1fr; gap: 23px; }
-  .approach-mark { font-size: 78px; }
+  .approach-mark img { width: 78px; }
   .approach-steps { grid-column: auto; margin-top: 7px; }
   .approach-copy h2 { font-size: 36px; }
   .contact-inner { grid-template-columns: 1fr; gap: 34px; }
